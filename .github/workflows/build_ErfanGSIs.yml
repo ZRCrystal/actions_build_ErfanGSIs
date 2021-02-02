@@ -15,7 +15,7 @@ on:
     
 env:
   ROM_URL: https://hugeota.d.miui.com/21.1.29/miui_VENUS_21.1.29_7dad5d1fd3_11.0.zip
-  ROM_NAME: MIUI
+  ROM_NAME: Generic
   TZ: Asia/Shanghai
 
 jobs:
@@ -51,7 +51,7 @@ jobs:
               sudo bash setup.sh
        
        - name: Download Stock Rom & Generate GSI
-         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME -a
+         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME -ab
        
        - name: Zip GSI  
          run: |
